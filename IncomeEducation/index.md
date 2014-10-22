@@ -70,7 +70,7 @@ You don't need any technical skills for this shiny app, just a little curiosity.
 <img height='300px' src='./assets/img/5_GenderAverage.png' /> 
 
 
-Learn a little more about the change in availanle family income with respect to time, age, gender, religion, and highest attained degree.
+Learn a little more about the change in family income with respect to time, age, gender, religion, and highest attained degree.
 
 
 --- .class #id 
