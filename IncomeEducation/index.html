@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Income and Education and Gender! Oh my!</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Income and Education and Gender! Oh my!">
+  <meta name="author" content="Sepanda Pouryahya.">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Income and Education and Gender! Oh my!</h1>
+    <h2>A shiny app made to explore US data.</h2>
+    <p>Sepanda Pouryahya.<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <style>
+.title-slide { background-color: #186DB6;}
+.title-slide hgroup > h1{ font-family: 'Helvetica', 'Helvetica', sanserif; }
+.title-slide hgroup > h1 { color: #FABF29; } 
+.title-slide hgroup > h2 { color: #dfdfdf }
+.title-slide hgroup > p { color: #dfdfdf ;}
+</style>
+
+<h2>The app!</h2>
+
+<p>Free to use and runs right in the browser!</p>
+
+<table><thead>
+<tr>
+<th align="center">Intro</th>
+<th align="center">Explore the average US incomes!</th>
+<th align="center">Explore trends in time</th>
+<th align="center">Group the data!</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="center"><img height='200px' src='./assets/img/1_about.png' /></td>
+<td align="center"><img height='200px' src='./assets/img/2_barchart.png' /></td>
+<td align="center"><img height='200px' src='./assets/img/3_scatterplot.png' /></td>
+<td align="center"><img height='200px' src='./assets/img/4_boxplot.png' /></td>
+</tr>
+</tbody></table>
+
+<p>Grab it here: <a href="https://sepanda.shinyapps.io/ShinyApp/">https://sepanda.shinyapps.io/ShinyApp/</a></p>
+
+<p>Check out the source code:   </p>
+
+<p><a href="https://github.com/sepanda/DevelopingDataProducts/tree/master/ShinyApp">https://github.com/sepanda/DevelopingDataProducts/tree/master/ShinyApp</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Looking through data for everyone.</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Some questions are asked by many people and instead of turning to data, they leave the question unanswered. </p>
+
+<p>That&#39;s not a surprise when faced with learning a new skill like R.</p>
+
+<pre><code class="r">library(car); library(dplyr);
+data(States); States_tbl &lt;- tbl_df(States)
+States_tbl %&gt;% group_by(region) %&gt;% select(pay) %&gt;% summarize(avgTeachPay=mean(pay*1e3)) %&gt;% t
+</code></pre>
+
+<pre><code>##             [,1]    [,2]    [,3]    [,4]    [,5]    [,6]    [,7]   
+## region      &quot;ENC&quot;   &quot;ESC&quot;   &quot;MA&quot;    &quot;MTN&quot;   &quot;NE&quot;    &quot;PAC&quot;   &quot;SA&quot;   
+## avgTeachPay &quot;33800&quot; &quot;27000&quot; &quot;38667&quot; &quot;28000&quot; &quot;34333&quot; &quot;35800&quot; &quot;31778&quot;
+##             [,8]    [,9]   
+## region      &quot;WNC&quot;   &quot;WSC&quot;  
+## avgTeachPay &quot;27000&quot; &quot;25250&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Friendly to use.</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>You don&#39;t need any technical skills for this shiny app, just a little curiosity.</p>
+
+<p><img height='300px' src='./assets/img/5_GenderAverage.png' /> </p>
+
+<p>Learn a little more about the change in availanle family income with respect to time, age, gender, religion, and highest attained degree.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Thanks!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Thanks for your time.</p>
+
+<p>That app:
+<a href="https://sepanda.shinyapps.io/ShinyApp/">https://sepanda.shinyapps.io/ShinyApp/</a></p>
+
+<p>My github:
+<a href="https://github.com/sepanda">https://github.com/sepanda</a></p>
+
+<p>More about me:</p>
+
+<ul>
+<li><a href="http://sepanda.com/about/">sepanda.com/About</a></li>
+<li><a href="http://linkedin.com/in/sepandapouryahya/">linkedIn</a></li>
+</ul>
+
+<p>Want to make your own shiny app? </p>
+
+<ul>
+<li><a href="http://www.r-project.org/">The R Project for Statistical Computing</a></li>
+<li><a href="http://www.rstudio.com/">Rstudio</a></li>
+<li><a href="http://www.github.com/">Github</a></li>
+<li><a href="http://www.coursera.org">Coursera</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Looking through data for everyone.'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Friendly to use.'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Thanks!'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
